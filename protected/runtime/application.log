@@ -78,3 +78,35 @@ Stack trace:
 #15 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #16 D:\www\web\index.php(13): CApplication->run()
 #17 {main} REQUEST_URI=/web/index.php?r=site/contact
+2011/09/24 23:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index'dhlfh".' in D:\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 D:\www\yii\framework\web\CController.php(262): CController->missingAction('index'dhlfh')
+#1 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('index'dhlfh')
+#2 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('site/index'dhlf...')
+#3 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 D:\www\web\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/web/index.php?r=site/index'dhlfh
+2011/09/25 01:04:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "music/index".' in D:\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('music/index')
+#1 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\www\web\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/web/index.php?r=music/index
+2011/09/25 01:04:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii/index".' in D:\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('gii/index')
+#1 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\www\web\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/web/index.php?r=gii/index
+2011/09/25 01:04:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "music/index".' in D:\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('music/index')
+#1 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\www\web\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/web/index.php?r=music/index
+2011/09/25 01:04:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "music".' in D:\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('music')
+#1 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\www\web\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/web/index.php?r=music
