@@ -110,3 +110,77 @@ Stack trace:
 #1 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #2 D:\www\web\index.php(13): CApplication->run()
 #3 {main} REQUEST_URI=/web/index.php?r=music
+2011/09/25 01:40:46 [error] [php] opendir(D:\www\web\protected\modules\admin\modules\view\,D:\www\web\protected\modules\admin\modules\view\): The system cannot find the path specified. (code: 3) (D:\www\yii\framework\utils\CFileHelper.php:160)
+Stack trace:
+#0 D:\www\web\protected\modules\admin\controllers\DefaultController.php(9): findFiles()
+#1 D:\www\yii\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#2 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 D:\www\yii\framework\web\CController.php(278): DefaultController->runAction()
+#4 D:\www\yii\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#5 D:\www\yii\framework\web\CWebApplication.php(277): DefaultController->run()
+#6 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#7 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#8 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/default/index
+in D:\www\web\protected\modules\admin\controllers\DefaultController.php (9)
+in D:\www\web\index.php (13)
+2011/09/25 01:42:03 [error] [php] opendir(D:\www\web\protected\modules\admin\modules,D:\www\web\protected\modules\admin\modules): The system cannot find the file specified. (code: 2) (D:\www\yii\framework\utils\CFileHelper.php:160)
+Stack trace:
+#0 D:\www\web\protected\modules\admin\controllers\DefaultController.php(9): findFiles()
+#1 D:\www\yii\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#2 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 D:\www\yii\framework\web\CController.php(278): DefaultController->runAction()
+#4 D:\www\yii\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#5 D:\www\yii\framework\web\CWebApplication.php(277): DefaultController->run()
+#6 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#7 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#8 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/default/index
+in D:\www\web\protected\modules\admin\controllers\DefaultController.php (9)
+in D:\www\web\index.php (13)
+2011/09/25 01:42:48 [error] [php] opendir(D:\www\web\protected\modules\admin\modules\view\,D:\www\web\protected\modules\admin\modules\view\): The system cannot find the path specified. (code: 3) (D:\www\yii\framework\utils\CFileHelper.php:160)
+Stack trace:
+#0 D:\www\web\protected\modules\admin\controllers\DefaultController.php(9): findFiles()
+#1 D:\www\yii\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#2 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 D:\www\yii\framework\web\CController.php(278): DefaultController->runAction()
+#4 D:\www\yii\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#5 D:\www\yii\framework\web\CWebApplication.php(277): DefaultController->run()
+#6 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#7 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#8 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/default/index
+in D:\www\web\protected\modules\admin\controllers\DefaultController.php (9)
+in D:\www\web\index.php (13)
+2011/09/25 01:44:53 [error] [php] opendir(D:\www\web\protected\modules\admin\modules\views\,D:\www\web\protected\modules\admin\modules\views\): The system cannot find the path specified. (code: 3) (D:\www\yii\framework\utils\CFileHelper.php:160)
+Stack trace:
+#0 D:\www\web\protected\modules\admin\controllers\DefaultController.php(9): findFiles()
+#1 D:\www\yii\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#2 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 D:\www\yii\framework\web\CController.php(278): DefaultController->runAction()
+#4 D:\www\yii\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#5 D:\www\yii\framework\web\CWebApplication.php(277): DefaultController->run()
+#6 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#7 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#8 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/default/index
+in D:\www\web\protected\modules\admin\controllers\DefaultController.php (9)
+in D:\www\web\index.php (13)
+2011/09/25 01:51:02 [error] [php] Missing argument 1 for CModule::getModule(), called in D:\www\web\protected\modules\admin\controllers\DefaultController.php on line 7 and defined (D:\www\yii\framework\base\CModule.php:253)
+Stack trace:
+#0 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#1 D:\www\yii\framework\web\CController.php(278): DefaultController->runAction()
+#2 D:\www\yii\framework\web\CController.php(257): DefaultController->runActionWithFilters()
+#3 D:\www\yii\framework\web\CWebApplication.php(277): DefaultController->run()
+#4 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#5 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#6 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/default/index
+in D:\www\web\protected\modules\admin\controllers\DefaultController.php (7)
+in D:\www\web\index.php (13)
+2011/09/25 02:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/layouts".' in D:\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/layouts')
+#1 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 D:\www\web\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/web/index.php?r=admin/layouts
