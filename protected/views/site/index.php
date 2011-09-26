@@ -1,4 +1,10 @@
-<?php $this->pageTitle=Yii::app()->name; ?>
+<?php $this->pageTitle=Yii::app()->name;
+
+$menuControllers = Yii::app()->qtools->setMenuControllerOfModule();
+$this->widget('zii.widgets.CMenu',array(
+			'items'=>$menuControllers,
+		)); 
+?>
 
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 

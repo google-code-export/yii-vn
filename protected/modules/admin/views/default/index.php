@@ -2,24 +2,27 @@
 $this->breadcrumbs = array(
     $this->module->id,
 );
-$allController  =  array();
-$list = array('.','..','.svn','layouts');
-if (is_dir($dir)) {
-    if ($dh = opendir($dir)) {
-        while (($sub_dir = readdir($dh)) !== false) {
-            if (!(in_array($sub_dir, $list))) {
-                $url = '/admin/'.$sub_dir;
-                $label = 'Manage '.$sub_dir;
-                $link_temp = array('label'=>$label, 'url'=>array($url));
-                array_push($allController, $link_temp);
-            }
-        } 
-    }
-    closedir($dh);
-}
+//$allController  =  array();
+//$list = array('.','..','.svn','layouts');
+//if (is_dir($dir)) {
+//    if ($dh = opendir($dir)) {
+//        while (($sub_dir = readdir($dh)) !== false) {
+//            if (!(in_array($sub_dir, $list))) {
+//                $url = '/admin/'.$sub_dir;
+//                $label = 'Manage '.$sub_dir;
+//                $link_temp = array('label'=>$label, 'url'=>array($url));
+//                array_push($allController, $link_temp);
+//            }
+//        } 
+//    }
+//    closedir($dh);
+//}
+$menuControllers = Yii::app()->qtools->setMenuControllerOfModule($this->module->id);
 $this->widget('zii.widgets.CMenu',array(
-			'items'=>$allController,
-		)); ?>
+			'items'=>$menuControllers,
+		)); 
+
+?>
 <h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
 
 <p>

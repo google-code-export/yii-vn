@@ -3,7 +3,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'author-form',
 	'enableAjaxValidation'=>false,
-)); ?>
+)); 
+
+?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
