@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'application.helpers.*',
 	),
 
 	'modules'=>array(
@@ -52,7 +53,12 @@ return array(
 //			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 //		),
 		// uncomment the following to use a MySQL database
-		
+		'file'=>array(
+                    'class'=>'application.extensions.file.CFile',
+                ),
+                'qtools'=>array(
+                    'class'=>'application.extensions.QTools.QTools',
+                ),
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=music',
 			'emulatePrepare' => true,

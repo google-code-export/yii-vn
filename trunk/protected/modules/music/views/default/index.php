@@ -2,6 +2,10 @@
 $this->breadcrumbs=array(
 	$this->module->id,
 );
+$menuControllers = Yii::app()->qtools->setMenuControllerOfModule($this->module->id);
+$this->widget('zii.widgets.CMenu',array(
+			'items'=>$menuControllers,
+		)); 
 ?>
 <h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
 
