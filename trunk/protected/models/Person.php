@@ -4,20 +4,24 @@
  * This is the model class for table "person".
  *
  * The followings are the available columns in table 'person':
- * @property integer $id
+ * @property string $id
  * @property string $name
  * @property string $realname
- * @property integer $isauthor
+ * @property integer $job
  * @property string $avatar
  * @property string $about
  * @property string $company
- * @property string $birthday
+ * @property integer $birthday
+ * @property integer $gender
  */
-class Author extends CActiveRecord
+class Person extends CActiveRecord
 {
-	/**
+	const S_IMAGES      = '/media/images/';
+        const S_THUMBNAIL   = '/media/images/thumbnails/';
+        const S_NOIMAGE     = 'noimage.gif';
+        /**
 	 * Returns the static model of the specified AR class.
-	 * @return Author the static model class
+	 * @return Person the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -41,12 +45,18 @@ class Author extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('isauthor', 'numerical', 'integerOnly'=>true),
-			array('name, realname, avatar, company, birthday', 'length', 'max'=>45),
+			array('job, birthday, gender', 'numerical', 'integerOnly'=>true),
+			array('name, realname, avatar, company', 'length', 'max'=>255),
+                        array('avatar', 'file',
+                            'types'     => 'gif, jpg, png',
+                            'maxSize'   =>1024 * 1024 * 2,
+                            'tooLarge'  =>'The file was larger than 2MB. Please upload a smaller file.',
+                            'allowEmpty'=>true,
+                        ),
 			array('about', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, realname, isauthor, avatar, about, company, birthday', 'safe', 'on'=>'search'),
+			array('id, name, realname, job, avatar, about, company, birthday, gender', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,11 +80,12 @@ class Author extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'realname' => 'Realname',
-			'isauthor' => 'Isauthor',
+			'job' => 'Job',
 			'avatar' => 'Avatar',
 			'about' => 'About',
 			'company' => 'Company',
 			'birthday' => 'Birthday',
+			'gender' => 'Gender',
 		);
 	}
 
@@ -89,14 +100,15 @@ class Author extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('id',$this->id,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('realname',$this->realname,true);
-		$criteria->compare('isauthor',$this->isauthor);
+		$criteria->compare('job',$this->job);
 		$criteria->compare('avatar',$this->avatar,true);
 		$criteria->compare('about',$this->about,true);
 		$criteria->compare('company',$this->company,true);
-		$criteria->compare('birthday',$this->birthday,true);
+		$criteria->compare('birthday',$this->birthday);
+		$criteria->compare('gender',$this->gender);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
