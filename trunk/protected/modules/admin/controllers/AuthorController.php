@@ -61,14 +61,14 @@ class AuthorController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Author;
+		$model=new Person;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Author']))
+		if(isset($_POST['Person']))
 		{
-			$model->attributes=$_POST['Author'];
+			$model->attributes=$_POST['Person'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -90,9 +90,9 @@ class AuthorController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Author']))
+		if(isset($_POST['Person']))
 		{
-			$model->attributes=$_POST['Author'];
+			$model->attributes=$_POST['Person'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -127,7 +127,7 @@ class AuthorController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Author');
+		$dataProvider=new CActiveDataProvider('Person');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +138,10 @@ class AuthorController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Author('search');
+		$model=new Person('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Author']))
-			$model->attributes=$_GET['Author'];
+		if(isset($_GET['Person']))
+			$model->attributes=$_GET['Person'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +155,7 @@ class AuthorController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Author::model()->findByPk($id);
+		$model=Person::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,7 +167,7 @@ class AuthorController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='author-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='person-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

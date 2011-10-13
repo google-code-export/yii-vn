@@ -61,18 +61,34 @@ class ArtistController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Artist;
-
+		$model=new Person;                
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Artist']))
+		if(isset($_POST['Person']))
 		{
-			$model->attributes=$_POST['Artist'];
+			$model->attributes=$_POST['Person'];
+                        $model->job = 0;
+                        $model->birthday = CDateTimeParser::parse($model->birthday,'dd/MM/yyyy');
+                        $model->avatar   = CUploadedFile::getInstance($model,'avatar');
+                            if ($model->avatar != null){
+                                $avatar_name = 'image_'.$model->id.'_'.time().'.'.$model->avatar->getExtensionName();
+                                $model->avatar->saveAs(Yii::getPathOfAlias('webroot').Person::S_IMAGES.$avatar_name);
+                                $image = Yii::app()->image->load(Yii::getPathOfAlias('webroot').Person::S_IMAGES.$avatar_name);
+                               // $image = new Image;
+                                
+                                if(128 < $image->__get('width')) {
+                                    $image->resize(128,128, Image::HEIGHT);
+                                }
+                                $image->save(Yii::getPathOfAlias('webroot').Person::S_THUMBNAIL.$avatar_name); // or $image->save('images/small.jpg');
+                                $model->avatar = $avatar_name;
+                            }
+                            else {
+                                $model->avatar = Person::S_NOIMAGE;
+                            } 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -90,9 +106,9 @@ class ArtistController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Artist']))
+		if(isset($_POST['Person']))
 		{
-			$model->attributes=$_POST['Artist'];
+			$model->attributes=$_POST['Person'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -127,7 +143,7 @@ class ArtistController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Artist');
+		$dataProvider=new CActiveDataProvider('Person');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +154,10 @@ class ArtistController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Artist('search');
+		$model=new Person('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Artist']))
-			$model->attributes=$_GET['Artist'];
+		if(isset($_GET['Person']))
+			$model->attributes=$_GET['Person'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +171,7 @@ class ArtistController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Artist::model()->findByPk($id);
+		$model=Person::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,7 +183,7 @@ class ArtistController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='artist-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='Person-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
