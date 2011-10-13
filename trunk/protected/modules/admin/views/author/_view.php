@@ -33,6 +33,10 @@
 	<?php echo CHtml::encode($data->birthday); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('gender')); ?>:</b>
+	<?php echo CHtml::encode($data->gender); ?>
+	<br />
+
 	*/ ?>
 
 </div>

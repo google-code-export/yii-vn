@@ -21,10 +21,11 @@ $this->menu=array(
 		'id',
 		'name',
 		'realname',
-		'isauthor',
+		'job',
 		'avatar',
 		'about',
 		'company',
 		'birthday',
+                'gender'
 	),
 )); ?>
