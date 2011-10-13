@@ -7,17 +7,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->textField($model,'id',array('size'=>11,'maxlength'=>11)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'realname'); ?>
-		<?php echo $form->textField($model,'realname',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'realname',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -27,7 +27,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'avatar'); ?>
-		<?php echo $form->textField($model,'avatar',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'avatar',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -37,12 +37,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'company'); ?>
-		<?php echo $form->textField($model,'company',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'company',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'birthday'); ?>
-		<?php echo $form->textField($model,'birthday',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'birthday'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'gender'); ?>
+		<?php echo $form->textField($model,'gender'); ?>
 	</div>
 
 	<div class="row buttons">
