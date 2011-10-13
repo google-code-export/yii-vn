@@ -56,6 +56,13 @@ return array(
 		'file'=>array(
                     'class'=>'application.extensions.file.CFile',
                 ),
+                'image'=>array(
+                  'class'=>'application.extensions.image.CImageComponent',
+                    // GD or ImageMagick
+                    'driver'=>'GD',
+                    // ImageMagick setup path
+                    //'params'=>array('directory'=>'/opt/local/bin'),
+                ),
                 'qtools'=>array(
                     'class'=>'application.extensions.QTools.QTools',
                 ),
