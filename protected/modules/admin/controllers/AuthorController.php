@@ -27,7 +27,7 @@ class AuthorController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','AutoSearchAuthor'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -147,7 +147,18 @@ class AuthorController extends Controller
 			'model'=>$model,
 		));
 	}
-
+        public function actionAutoSearchAuthor() {
+        $res = array();
+        if (isset($_GET['term'])) {
+            $qtxt = "SELECT name FROM person WHERE name LIKE :name AND job=1";
+            $command = Yii::app()->db->createCommand($qtxt);
+            $command->bindValue(":name", '%' . $_GET['term'] . '%', PDO::PARAM_STR);
+            $res = $command->queryColumn();   
+        }
+         
+        echo CJSON::encode($res);
+        Yii::app()->end();
+    }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

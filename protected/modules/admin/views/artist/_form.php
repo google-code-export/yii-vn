@@ -10,16 +10,29 @@
 
     <p class="note">Fields with <span class="required">*</span> are required.</p>
 
-    <?php echo $form->errorSummary($model); ?>
-
+    <?php echo $form->errorSummary($model); 
+    
+    
+    ?>
     <div class="row">
         <?php echo $form->labelEx($model, 'name'); ?>
-        <?php echo $form->textField($model, 'name', array('size' => 45, 'maxlength' => 45)); ?>
+        <?php //echo $form->textField($model, 'name', array('size' => 45, 'maxlength' => 45)); 
+                $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'model'=>$model,
+                    'attribute'=>'name',
+                    //'value'=>'',
+                    'source'=>$this->createUrl('author/autoSearchAuthor'),
+                    // additional javascript options for the autocomplete plugin
+                    'options'=>array(
+                                    'showAnim'=>'fold',
+                    ),
+                 ));
+        ?> 
         <?php echo $form->error($model, 'name'); ?>
     </div>
     <div class="row">
-        <?php echo $form->labelEx($model, 'gender'); ?>
-        <?php echo $form->textField($model, 'gender'); ?>
+        <?php echo $form->labelEx($model, 'gender'); ?>       
+        <?php echo $form->dropDownList($model,'gender',  Person::getGender()); ?>
         <?php echo $form->error($model, 'gender'); ?>
     </div>
 
@@ -36,7 +49,19 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'about'); ?>
-        <?php echo $form->textArea($model, 'about', array('rows' => 6, 'cols' => 50)); ?>
+        <?php $this->widget('application.extensions.cleditor.ECLEditor', array(
+                'model'=>$model,
+                'attribute'=>'about', 
+                'options'=>array(
+                    'width'=>'400',
+                    'height'=>'200',
+                    'useCSS'=>true,
+                    //'controls' => 'bold italic underline strikethrough subscript superscript',
+                ),
+                'value'=>$model->about,
+    ));
+        ?>
+        
         <?php echo $form->error($model, 'about'); ?>
     </div>
 
