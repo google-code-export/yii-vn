@@ -1708,3 +1708,645 @@ Stack trace:
 #20 /media/data/www/yii/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #21 /media/data/www/web/index.php(13): CApplication->run()
 #22 {main} REQUEST_URI=/web/index.php?r=admin/artist
+2011/10/14 23:10:56 [error] [php] Undefined variable: post (D:\www\web\protected\modules\admin\views\artist\_form.php:15)
+Stack trace:
+#0 D:\www\yii\framework\web\CController.php(866): ArtistController->renderFile()
+#1 D:\www\web\protected\modules\admin\views\artist\create.php(15): ArtistController->renderPartial()
+#2 D:\www\yii\framework\web\CBaseController.php(119): require()
+#3 D:\www\yii\framework\web\CBaseController.php(88): ArtistController->renderInternal()
+#4 D:\www\yii\framework\web\CController.php(866): ArtistController->renderFile()
+#5 D:\www\yii\framework\web\CController.php(779): ArtistController->renderPartial()
+#6 D:\www\web\protected\modules\admin\controllers\ArtistController.php(92): ArtistController->render()
+#7 D:\www\yii\framework\web\actions\CInlineAction.php(50): ArtistController->actionCreate()
+#8 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#9 D:\www\yii\framework\web\filters\CFilterChain.php(134): ArtistController->runAction()
+#10 D:\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 D:\www\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#12 D:\www\yii\framework\web\filters\CInlineFilter.php(59): ArtistController->filterAccessControl()
+#13 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#15 D:\www\yii\framework\web\CController.php(257): ArtistController->runActionWithFilters()
+#16 D:\www\yii\framework\web\CWebApplication.php(277): ArtistController->run()
+#17 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#18 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#19 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/artist/create
+in D:\www\web\protected\modules\admin\views\artist\_form.php (15)
+in D:\www\web\protected\modules\admin\views\artist\create.php (15)
+in D:\www\web\protected\modules\admin\controllers\ArtistController.php (92)
+2011/10/14 23:11:48 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.editor.fckeditor" is invalid. Make sure it points to an existing PHP file.' in D:\www\yii\framework\YiiBase.php:321
+Stack trace:
+#0 D:\www\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('application.ext...', true)
+#1 D:\www\yii\framework\web\CBaseController.php(139): CWidgetFactory->createWidget(Object(ArtistController), 'application.ext...', Array)
+#2 D:\www\yii\framework\web\CBaseController.php(165): CBaseController->createWidget('application.ext...', Array)
+#3 D:\www\web\protected\modules\admin\views\artist\_form.php(17): CBaseController->widget('application.ext...', Array)
+#4 D:\www\yii\framework\web\CBaseController.php(119): require('D:\www\web\prot...')
+#5 D:\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('D:\www\web\prot...', Array, true)
+#6 D:\www\yii\framework\web\CController.php(866): CBaseController->renderFile('D:\www\web\prot...', Array, true)
+#7 D:\www\web\protected\modules\admin\views\artist\create.php(15): CController->renderPartial('_form', Array)
+#8 D:\www\yii\framework\web\CBaseController.php(119): require('D:\www\web\prot...')
+#9 D:\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('D:\www\web\prot...', Array, true)
+#10 D:\www\yii\framework\web\CController.php(866): CBaseController->renderFile('D:\www\web\prot...', Array, true)
+#11 D:\www\yii\framework\web\CController.php(779): CController->renderPartial('create', Array, true)
+#12 D:\www\web\protected\modules\admin\controllers\ArtistController.php(92): CController->render('create', Array)
+#13 D:\www\yii\framework\web\actions\CInlineAction.php(50): ArtistController->actionCreate()
+#14 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#15 D:\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 D:\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#18 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#21 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('create')
+#23 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/cr...')
+#24 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#25 D:\www\web\index.php(13): CApplication->run()
+#26 {main} REQUEST_URI=/web/index.php?r=admin/artist/create
+2011/10/14 23:27:06 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.ieditor.IEditor" is invalid. Make sure it points to an existing PHP file.' in D:\www\yii\framework\YiiBase.php:321
+Stack trace:
+#0 D:\www\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('application.ext...', true)
+#1 D:\www\yii\framework\web\CBaseController.php(139): CWidgetFactory->createWidget(Object(ArtistController), 'application.ext...', Array)
+#2 D:\www\yii\framework\web\CBaseController.php(165): CBaseController->createWidget('application.ext...', Array)
+#3 D:\www\web\protected\modules\admin\views\artist\_form.php(20): CBaseController->widget('application.ext...', Array)
+#4 D:\www\yii\framework\web\CBaseController.php(119): require('D:\www\web\prot...')
+#5 D:\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('D:\www\web\prot...', Array, true)
+#6 D:\www\yii\framework\web\CController.php(866): CBaseController->renderFile('D:\www\web\prot...', Array, true)
+#7 D:\www\web\protected\modules\admin\views\artist\create.php(15): CController->renderPartial('_form', Array)
+#8 D:\www\yii\framework\web\CBaseController.php(119): require('D:\www\web\prot...')
+#9 D:\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('D:\www\web\prot...', Array, true)
+#10 D:\www\yii\framework\web\CController.php(866): CBaseController->renderFile('D:\www\web\prot...', Array, true)
+#11 D:\www\yii\framework\web\CController.php(779): CController->renderPartial('create', Array, true)
+#12 D:\www\web\protected\modules\admin\controllers\ArtistController.php(92): CController->render('create', Array)
+#13 D:\www\yii\framework\web\actions\CInlineAction.php(50): ArtistController->actionCreate()
+#14 D:\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#15 D:\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 D:\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#18 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#21 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('create')
+#23 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/cr...')
+#24 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#25 D:\www\web\index.php(13): CApplication->run()
+#26 {main} REQUEST_URI=/web/index.php?r=admin/artist/create
+2011/10/14 23:59:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=U
+2011/10/14 23:59:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=Un
+2011/10/15 00:00:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=uwng
+2011/10/15 00:00:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=U
+2011/10/15 00:00:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng
+2011/10/15 00:00:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng+
+2011/10/15 00:00:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng++
+2011/10/15 00:00:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng+
+2011/10/15 00:08:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=test21
+2011/10/15 00:08:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=U
+2011/10/15 00:08:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AF
+2011/10/15 00:08:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFn
+2011/10/15 00:08:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng
+2011/10/15 00:08:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng+
+2011/10/15 00:08:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng
+2011/10/15 00:08:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng+
+2011/10/15 00:08:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng++
+2011/10/15 00:08:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=%C6%AFng+
+2011/10/15 00:08:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=+
+2011/10/15 00:08:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=U
+2011/10/15 00:08:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=L
+2011/10/15 00:08:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=L+
+2011/10/15 00:08:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=L
+2011/10/15 00:09:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=qua
+2011/10/15 00:09:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quang
+2011/10/15 00:09:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quang+
+2011/10/15 00:09:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quang
+2011/10/15 00:09:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quan
+2011/10/15 00:09:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=qua
+2011/10/15 00:09:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=qu
+2011/10/15 00:09:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=qua
+2011/10/15 00:09:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quan
+2011/10/15 00:09:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quang
+2011/10/15 00:17:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=q
+2011/10/15 00:17:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=quang
+2011/10/15 00:18:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest
+2011/10/15 00:19:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "autocompleteTest?term=qua".' in D:\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 D:\www\yii\framework\web\CController.php(262): CController->missingAction('autocompleteTes...')
+#1 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#2 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#3 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 D:\www\web\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest?term=qua
+2011/10/15 00:19:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in D:\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 D:\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 D:\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 D:\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest/?term=qua
+2011/10/15 00:23:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "autocompleteTest?term=ng".' in D:\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 D:\www\yii\framework\web\CController.php(262): CController->missingAction('autocompleteTes...')
+#1 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#2 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#3 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 D:\www\web\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest?term=ng
+2011/10/15 00:24:15 [error] [php] Undefined index: term (D:\www\web\protected\modules\admin\controllers\ArtistController.php:96)
+Stack trace:
+#0 D:\www\yii\framework\web\filters\CFilterChain.php(134): ArtistController->runAction()
+#1 D:\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 D:\www\yii\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#3 D:\www\yii\framework\web\filters\CInlineFilter.php(59): ArtistController->filterAccessControl()
+#4 D:\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 D:\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 D:\www\yii\framework\web\CController.php(257): ArtistController->runActionWithFilters()
+#7 D:\www\yii\framework\web\CWebApplication.php(277): ArtistController->run()
+#8 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#9 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 D:\www\web\index.php(13): CWebApplication->run()
+REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest/?term=ng
+in D:\www\web\protected\modules\admin\controllers\ArtistController.php (96)
+in D:\www\web\index.php (13)
+2011/10/15 00:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "autocompleteTest".' in D:\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 D:\www\yii\framework\web\CController.php(262): CController->missingAction('autocompleteTes...')
+#1 D:\www\yii\framework\web\CWebApplication.php(277): CController->run('autocompleteTes...')
+#2 D:\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('admin/artist/au...')
+#3 D:\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 D:\www\web\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/web/index.php?r=admin/artist/autocompleteTest&term=qua
