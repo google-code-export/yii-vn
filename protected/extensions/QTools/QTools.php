@@ -17,9 +17,9 @@ class QTools extends CApplicationComponent {
      */
     public static function getAllNameControllerOfModule($moduleName = null) {
         $listController = array();
-        $pathControllers = Yii::app()->getBasePath() . '\controllers';
+        $pathControllers = Yii::app()->getBasePath() .DIRECTORY_SEPARATOR.'controllers';
         if (null != $moduleName) {
-            $pathControllers = Yii::app()->getModule($moduleName)->getBasePath() . '\controllers';
+            $pathControllers = Yii::app()->getModule($moduleName)->getBasePath() .DIRECTORY_SEPARATOR. 'controllers';
         }
         $setPathFiles = Yii::app()->file->set($pathControllers, true);
         $listPathFiles = $setPathFiles->getContents(false, '/Controller.php/');
