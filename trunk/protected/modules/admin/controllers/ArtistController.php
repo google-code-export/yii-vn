@@ -27,7 +27,7 @@ class ArtistController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','AutocompleteTest'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -73,18 +73,16 @@ class ArtistController extends Controller
                         $model->avatar   = CUploadedFile::getInstance($model,'avatar');
                             if ($model->avatar != null){
                                 $avatar_name = 'image_'.$model->id.'_'.time().'.'.$model->avatar->getExtensionName();
-                                $model->avatar->saveAs(Yii::getPathOfAlias('webroot').Person::S_IMAGES.$avatar_name);
-                                $image = Yii::app()->image->load(Yii::getPathOfAlias('webroot').Person::S_IMAGES.$avatar_name);
-                               // $image = new Image;
-                                
+                                $model->avatar->saveAs(Yii::getPathOfAlias('webroot').Person::M_IMAGES.$avatar_name);
+                                $image = Yii::app()->image->load(Yii::getPathOfAlias('webroot').Person::M_IMAGES.$avatar_name);
                                 if(128 < $image->__get('width')) {
                                     $image->resize(128,128, Image::HEIGHT);
                                 }
-                                $image->save(Yii::getPathOfAlias('webroot').Person::S_THUMBNAIL.$avatar_name); // or $image->save('images/small.jpg');
+                                $image->save(Yii::getPathOfAlias('webroot').Person::M_THUMBNAIL.$avatar_name); // or $image->save('images/small.jpg');
                                 $model->avatar = $avatar_name;
                             }
                             else {
-                                $model->avatar = Person::S_NOIMAGE;
+                                $model->avatar = Person::M_NOIMAGE;
                             } 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -93,7 +91,7 @@ class ArtistController extends Controller
 			'model'=>$model,
 		));
 	}
-
+        
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
