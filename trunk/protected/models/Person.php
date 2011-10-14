@@ -16,9 +16,20 @@
  */
 class Person extends CActiveRecord
 {
-	const S_IMAGES      = '/media/images/';
-        const S_THUMBNAIL   = '/media/images/thumbnails/';
-        const S_NOIMAGE     = 'noimage.gif';
+	const M_IMAGES      = '/media/images/';
+        const M_THUMBNAIL   = '/media/images/thumbnails/';
+        const M_NOIMAGE     = 'noimage.gif';
+        // Gender
+        const G_MALE        = 1;
+        const G_FEMALE      = 0;
+        const G_PD          = 2;
+        // Job
+        const M_ARTIST      = 0;
+        const M_AUTHOR      = 1;
+        const M_ART_AUT     = 2;
+        const M_BAND        = 3;
+        const M_MUSICIAN    = 4;
+
         /**
 	 * Returns the static model of the specified AR class.
 	 * @return Person the static model class
@@ -78,18 +89,42 @@ class Person extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'realname' => 'Realname',
-			'job' => 'Job',
-			'avatar' => 'Avatar',
-			'about' => 'About',
-			'company' => 'Company',
-			'birthday' => 'Birthday',
-			'gender' => 'Gender',
+			'name' => 'Nghệ danh',
+			'realname' => 'Tên thật',
+			'job' => 'Nghề nghiệp',
+			'avatar' => 'Ảnh đại diện',
+			'about' => 'Thông tin',
+			'company' => 'Công ty chủ quản',
+			'birthday' => 'Ngày sinh',
+			'gender' => 'Giới tính',
 		);
 	}
+        /**
+         *
+         * @return type gender
+         */
+        static public function getGender() {
+                return array(
+                    self::G_MALE => 'Nam',
+                    self::G_FEMALE => 'Nữ',
+                    self::G_PD => 'Không xác định'
+                );
+        }
+        /**
+         *
+         * @return type job
+         */
+        static public  function getJob() {
+                return array(
+                    self::M_ARTIST => 'Ca sĩ',
+                    self::M_AUTHOR => 'Tác giả',
+                    self::M_ART_AUT => 'Đồng ca sĩ & tác giả',
+                    self::M_BAND => 'Nhóm nhạc',
+                    self::M_MUSICIAN => 'Nhạc sĩ'
+                );
+        }
 
-	/**
+        /**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
